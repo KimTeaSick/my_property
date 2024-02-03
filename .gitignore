@@ -29,3 +29,5 @@ yarn-error.log*
 next-env.d.ts
 */__pycache__
 */.env
+/my_property_lib
+
