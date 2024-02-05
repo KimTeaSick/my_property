@@ -12,7 +12,7 @@ export default function Home() {
       <Button event={() => { console.log("asd") }} title="전체 자산" primary={false} size="w-[29rem] h-[9rem]" />
       <div className="flex gap-[1rem] my-4">
         <Button event={() => { router.push("/stock") }} primary={false} size="w-[9rem] h-[9rem]" title="주식" />
-        <Button event={() => { console.log("asd") }} primary={false} size="w-[9rem] h-[9rem]" title="코인" />
+        <Button event={() => { router.push("/coin") }} primary={false} size="w-[9rem] h-[9rem]" title="코인" />
         <Button event={() => { console.log("asd") }} primary={false} size="w-[9rem] h-[9rem]" title="부동산" />
       </div>
     </div>
