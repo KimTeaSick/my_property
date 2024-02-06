@@ -27,7 +27,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-*/__pycache__
+__pycache__
 */.env
 /my_property_lib
 

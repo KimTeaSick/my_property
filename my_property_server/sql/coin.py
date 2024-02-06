@@ -1,0 +1,1 @@
+get_my_coin_sql = "select * from mp_r_my_coin_t"
