@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from 'next/image'
 import { createContext, useContext } from 'react'
 import Default from "../../../assets/default.png"
+import { numChange } from '@/lib/numChange'
+
 
 type ListItemContextType = {
   icon: StaticImageData
@@ -42,23 +44,23 @@ const ListItemIcon = () => {
 }
 const ListItemTitle = ({ styles }: { styles?: string }) => {
   const { title } = useListItemContext()
-  return (<label className={styles}> {title}</label >)
+  return (<label className={styles}>{title}</label>)
 }
 const ListItemPrice = ({ styles }: { styles?: string }) => {
   const { price } = useListItemContext()
-  return (<label className={styles}> {price}</label >)
+  return (<label className={styles}> {numChange(price)}원</label>)
 }
 const ListItemUnit = ({ styles }: { styles?: string }) => {
   const { unit } = useListItemContext()
-  return (<label className={styles}> {unit}</label >)
+  return (<label className={styles}>{numChange(unit)}개</label>)
 }
 const ListItemTotal = ({ styles }: { styles?: string }) => {
   const { total } = useListItemContext()
-  return (<label className={styles}> {total}</label >)
+  return (<label className={styles}>{numChange(total)}</label>)
 }
 const ListItemPercent = ({ styles }: { styles?: string }) => {
   const { percent } = useListItemContext()
-  return (<label className={styles}> {percent}%</label >)
+  return (<label className={styles}>{percent}%</label>)
 }
 
 ListItem.Icon = ListItemIcon

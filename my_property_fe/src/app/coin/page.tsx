@@ -5,12 +5,10 @@ import { useMyCoin } from '@/service/coin'
 
 const Coin = () => {
   const coinList = useMyCoin()
-  console.log("coin page data : ", coinList?.data);
-  console.log("coin page data 2 : ",);
 
   return (
     <div className="flex flex-col p-5">
-      <TopSection />
+      <TopSection coinList={coinList?.data} />
       <List coinList={coinList?.data} />
     </div>
   )

@@ -1,8 +1,5 @@
 "use client"
-
-import { StaticImageData } from "next/image"
 import ListItem from "../headless/StockListItem"
-import { AxiosResponse } from "axios"
 
 export type CoinType = {
   "coin_name": null,
@@ -23,8 +20,6 @@ const subTitle = "font-semibold text-slate-700"
 const subscript = "text-sm text-slate-600"
 
 const List = ({ coinList }: Props) => {
-  console.log(coinList);
-
   return (
     <div className={[flexCol, "gap-2 items-center"].join(" ")}>
       {Array.isArray(coinList) && coinList.map((value: CoinType, index: number) => (
@@ -34,7 +29,7 @@ const List = ({ coinList }: Props) => {
               <div className={flexCol}>
                 <ListItem.Title styles={title} />
                 <div>
-                  <ListItem.Unit styles={subscript} />
+                  <ListItem.Unit styles={subscript} />,
                   <ListItem.Price styles={subscript} />
                 </div>
               </div>
