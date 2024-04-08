@@ -4,6 +4,7 @@ import Header from "./Header";
 
 import "./globals.css";
 import Providers from "./Provider";
+import { Background } from "./components/layout/Background";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +22,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col justify-center items-center h-dvh bg-sky-50">
-          <div className="h-dvh w-[940px] bg-white">
+          {/* <div className="h-dvh w-[940px] bg-white"> */}
+          <Background>
             <Providers >
               <Header />
               {children}
             </Providers>
-          </div>
+          </Background>
+          {/* </div> */}
         </div>
       </body>
     </html>

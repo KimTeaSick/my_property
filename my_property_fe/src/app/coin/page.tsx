@@ -1,7 +1,15 @@
 "use client"
+import { Metadata } from 'next'
+
 import List from '../components/coin/List'
 import TopSection from '../components/coin/TopSection'
 import { useMyCoin } from '@/service/coin'
+
+export const metadate: Metadata = {
+  title: '김요셉 노후관리 | 코인',
+  description: '코인 현황'
+}
+
 
 const Coin = () => {
   const coinList = useMyCoin()
