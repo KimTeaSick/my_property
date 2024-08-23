@@ -1,0 +1,11 @@
+@use "../../app/base" as base;
+
+.nav {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-button {
+  @include base.button-size--sm(white);
+}

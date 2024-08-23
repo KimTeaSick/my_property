@@ -1,0 +1,10 @@
+@use "base";
+
+.main {
+  font-size: base.$font-title--main;
+  font-weight: 700;
+}
+
+.button {
+  @include base.button-size--sm(yellow);
+}

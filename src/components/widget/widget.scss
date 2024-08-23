@@ -1,0 +1,19 @@
+.widget {
+  gap: 0.5rem;
+  width: 13rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aqua;
+
+  p {
+    margin: 0;
+    padding: 0;
+    &:last-child {
+      font-size: x-large;
+    }
+  }
+}

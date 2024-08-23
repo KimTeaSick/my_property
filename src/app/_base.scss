@@ -1,0 +1,71 @@
+//-------------------------------------------------------
+//
+//                font size variables
+//
+//-------------------------------------------------------
+
+$font-size--xs: 12px;
+
+$font-size--sm: 14px;
+
+$font-size--base: 16px;
+
+$font-size--lg: 18px;
+
+$font-size--xl: 20px;
+
+$font-title--sub: 28px;
+
+$font-title--main: 32px;
+
+//-------------------------------------------------------
+//
+//                color variables
+//
+//-------------------------------------------------------
+
+$color-primary: #1842fd;
+
+//-------------------------------------------------------
+//
+//                button size variables
+//
+//-------------------------------------------------------
+
+@mixin button-default($color: $color-primary) {
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: $color;
+}
+
+@mixin button-size--sm($color) {
+  @include button-default($color: $color);
+  width: 100px;
+  height: 50px;
+}
+
+@mixin button-size--base($color) {
+  @include button-default($color: $color);
+  width: 150px;
+  height: 50px;
+}
+
+@mixin button-size--lg($color) {
+  @include button-default($color: $color);
+  width: 200px;
+  height: 50px;
+}
+
+//-------------------------------------------------------
+//
+//                font family
+//
+//-------------------------------------------------------
+
+// @font-face {
+//   font-family: "DaddyDay";
+//   src: url("../assets/fonts/DaddyDay.otf") format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }

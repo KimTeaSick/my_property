@@ -1,8 +1,8 @@
+import Nav from "@/components/nav/Nav";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Bungee } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const bungee = Bungee({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bungee.className}>
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
